@@ -2,16 +2,16 @@
 	path = bundle/ZoomWin
 	url = https://github.com/vim-scripts/ZoomWin.git
 [submodule "/home/nathan/.vim/bundle/gundo"]
-	path = /home/nathan/.vim/bundle/gundo
+	path = bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "/home/nathan/.vim/bundle/vim-airline"]
-	path = /home/nathan/.vim/bundle/vim-airline
+	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
 [submodule "/home/nathan/.vim/bundle/vim-easymotion"]
-	path = /home/nathan/.vim/bundle/vim-easymotion
+	path = bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala

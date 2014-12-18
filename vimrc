@@ -22,6 +22,8 @@ nnoremap <leader>h <C-w>s<C-w>l
 :nnoremap <Space> :exec "normal i".nr2char(getchar())."\e"<CR>
 :nnoremap <Space>l :exec "normal a".nr2char(getchar())."\e"<CR>
 
+:nnoremap m :bn<CR>
+
 " Gundo
 nnoremap <leader>u :GundoToggle<CR>
 

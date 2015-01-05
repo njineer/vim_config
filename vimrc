@@ -23,6 +23,11 @@ nnoremap <leader>h <C-w>s<C-w>l
 :nnoremap <Space>l :exec "normal a".nr2char(getchar())."\e"<CR>
 
 :nnoremap m :bn<CR>
+:nnoremap <leader>. :tabn<CR>
+:nnoremap <leader>, :tabp<CR>
+" press jk as Esc
+:inoremap jk <Esc>
+:inoremap kj <Esc>
 
 " Gundo
 nnoremap <leader>u :GundoToggle<CR>

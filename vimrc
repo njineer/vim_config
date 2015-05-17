@@ -17,17 +17,40 @@ execute pathogen#infect()
 set number      " line numbers!
 set history=100 " More command history!
 set incsearch   " Show first match while still typing it
+
+" autoreload .vimrc
+autocmd! bufwritepost .vimrc source %
+
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>h <C-w>s<C-w>l
 :nnoremap <Space> :exec "normal i".nr2char(getchar())."\e"<CR>
 :nnoremap <Space>l :exec "normal a".nr2char(getchar())."\e"<CR>
 
 :nnoremap <leader>m :bn<CR>
+:nnoremap <leader>t :tabnew<CR>
 :nnoremap <leader>. :tabn<CR>
 :nnoremap <leader>, :tabp<CR>
+:nnoremap <leader>q :q<CR>
 " press jk as Esc
 :inoremap jk <Esc>
 :inoremap kj <Esc>
+
+" Unite
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>p :<C-u>Unite -no-split -buffer-name=files -start-insert file<cr>
+nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/async<cr>
+nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer buffer<cr>
+" Custom mappings for the unite buffer
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+    "enable navigation with control-j and control-k in insert mode
+    imap <buffer> <C-j>     <Plug>(unite_select_next_line)
+    imap <buffer> <C-k>     <Plug>(unite_select_previous_line)
+endfunction
+
+" Tagbar
+nnoremap <leader>y :TagbarToggle<CR><C-w>l
 
 " Gundo
 nnoremap <leader>u :GundoToggle<CR>

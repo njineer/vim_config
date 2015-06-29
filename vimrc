@@ -37,10 +37,17 @@ nnoremap <leader>h <C-w>s<C-w>l
 
 " Unite
 let g:unite_source_history_yank_enable = 1
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --hidden --ignore '
+"let g:unite_source_grep_recursive_opt = ''
+
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>p :<C-u>Unite -no-split -buffer-name=files -start-insert file<cr>
 nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/async<cr>
 nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer buffer<cr>
+nnoremap <leader>a :<C-u>Unite grep:.<cr>
+nnoremap <leader>/ :Unite grep:.<cr>
+nnoremap <leader>y :<C-u>Unite history/yank<cr>
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
@@ -50,7 +57,7 @@ function! s:unite_settings()
 endfunction
 
 " Tagbar
-nnoremap <leader>y :TagbarToggle<CR><C-w>l
+nnoremap <leader>e :TagbarToggle<CR><C-w>l
 
 " Gundo
 nnoremap <leader>u :GundoToggle<CR>

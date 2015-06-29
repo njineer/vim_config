@@ -57,7 +57,8 @@ nnoremap <leader>u :GundoToggle<CR>
 
 " Color
 set t_Co=256
-colorscheme mustang
+colorscheme oxeded
+"colorscheme mustang
 "colorscheme monokain
 "colorscheme lucius
 " Airline
@@ -369,8 +370,10 @@ autocmd FileType c,cpp,java,diff autocmd BufWritePre <buffer> :%s/\s\+$//e
 	\     setlocal textwidth=78 |
 	\ endif
 
-	autocmd BufWrite * mkview
-	autocmd BufRead * silent loadview
+    " I don't know exactly what's going on here, but it's screwing stuff up,
+    " maybe b/c neovim
+	"autocmd BufWrite * mkview
+	"autocmd BufRead * silent loadview
 
 	" When editing a file, always jump to the last cursor position
 	autocmd BufReadPost *

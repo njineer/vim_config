@@ -61,3 +61,15 @@
 [submodule "bundle/vimproc.vim"]
 	path = bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/oxeded.vim"]
+	path = bundle/oxeded.vim
+	url = https://github.com/queyenth/oxeded.vim.git
+[submodule "bundle/csapprox"]
+	path = bundle/csapprox
+	url = https://github.com/godlygeek/csapprox.git
+[submodule "bundle/papercolor-theme"]
+	path = bundle/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "bundle/beekai"]
+	path = bundle/beekai
+	url = https://github.com/stephanedemotte/beekai.git

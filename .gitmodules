@@ -73,3 +73,6 @@
 [submodule "bundle/beekai"]
 	path = bundle/beekai
 	url = https://github.com/stephanedemotte/beekai.git
+[submodule "bundle/kraken.vim"]
+	path = bundle/kraken.vim
+	url = https://github.com/Limvot/kraken.vim.git

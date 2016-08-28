@@ -64,7 +64,9 @@ nnoremap <leader>u :GundoToggle<CR>
 
 " Color
 set t_Co=256
-colorscheme oxeded
+set termguicolors
+colorscheme gruvbox
+"colorscheme oxeded
 "colorscheme mustang
 "colorscheme monokain
 "colorscheme lucius

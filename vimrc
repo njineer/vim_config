@@ -63,7 +63,17 @@ nnoremap <leader>e :TagbarToggle<CR><C-w>l
 nnoremap <leader>u :GundoToggle<CR>
 
 " Color
+set termguicolors
+"set guicolors
 set t_Co=256
+" in case t_Co alone doesn't work, add this as well:
+"let &t_AB="\e[48;5;%dm"
+"let &t_AF="\e[38;5;%dm"
+
+"colorscheme kalisi
+"set background=dark
+"set background=light
+
 colorscheme oxeded
 "colorscheme mustang
 "colorscheme monokain
@@ -303,10 +313,10 @@ autocmd FileType c,cpp,java,diff autocmd BufWritePre <buffer> :%s/\s\+$//e
 	" {{{ Syntax highlighting settings
 	" Switch syntax highlighting on, when the terminal has colors
 	" Also switch on highlighting the last used search pattern.
-	if &t_Co > 2 || has("gui_running")
+	"if &t_Co > 2 || has("gui_running")
 	syntax on
 	set hlsearch
-	endif
+	"endif
 	" }}}
 
 	" {{{ Terminal fixes

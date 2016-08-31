@@ -74,6 +74,8 @@ set t_Co=256
 "set background=dark
 "set background=light
 
+set termguicolors
+"colorscheme gruvbox
 colorscheme oxeded
 "colorscheme mustang
 "colorscheme monokain

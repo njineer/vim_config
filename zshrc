@@ -1,11 +1,12 @@
 
-alias tmux='tmux -2'                      # automatically support 256 colors
+#alias tmux='tmux -2'                      # automatically support 256 colors
 alias n='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
 alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
-alias cloud='ssh 107.191.103.252'
+alias cloud='ssh 107.191.103.233'
 #alias serv='mosh -p 8768 --ssh="ssh -p 8767" nathan@room409.xyz'
 alias serv='ssh -p 8767 nathan@room409.xyz'
 alias desk='ssh -p 8766 nathan@room409.xyz'
+alias ls='echo "YOU SHOULD BE USING LISP!!"; ls'
 
 if ! pgrep -u $USER ssh-agent > /dev/null; then
     ssh-agent | sed "s/^echo.*$//" > ~/.ssh-agent-thing
@@ -17,9 +18,9 @@ ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias 
 
 
 alias o='xdg-open'
-alias l='i3lock; systemctl suspend'
+alias l='sudo $(i3lock; systemctl suspend)'
 alias minecraft='java -jar ~/minecraft/Minecraft.jar'
-alias lg='java -jar ~/school/fall2015/ta/Logisim.jar'
+#alias lg='java -jar ~/school/fall2015/ta/Logisim.jar'
 setxkbmap -layout us -option ctrl:nocaps
 
 export PATH=$PATH:~/bin:/home/nathan/.gem/ruby/2.2.0/bin:~/.gem/ruby/2.1.0/bin:~/Nim/bin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
@@ -34,7 +35,8 @@ export PATH=$PATH:$GOPATH/bin
 
 # thanks Andrew's file
 autoload -U colors && colors
-export PS1="%B%{$fg[red]%}[%{$fg[green]%}%n%{$fg[cyan]%}@%M %{$fg[white]%}%c%{$fg[red]%}]%#%{$reset_color%} %b"
+#export PS1="%B%{$fg[red]%}[%{$fg[green]%}%n%{$fg[cyan]%}@%M %{$fg[white]%}%c%{$fg[red]%}]%#%{$reset_color%} %b"
+export PS1="%B%{$fg[red]%}[%{$fg[green]%}%n%{$fg[cyan]%}@%M %{$fg[yellow]%}%c%{$fg[red]%}]%#%{$reset_color%} %b"
 
 #PS1='[\u@\h \W]\$ '
 BROWSER=/usr/bin/xdg-open

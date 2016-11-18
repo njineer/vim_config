@@ -33,8 +33,9 @@ alias lg='java -jar ~/Downloads/Logisim2.jar'
 alias np='nano PKGBUILD'
 
 #alias n='nvim'
-alias n='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
-alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
+#alias n='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
+#alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
+alias vim='nvim'
 
 alias o='xdg-open'
 alias desk='mosh -p 8765 --ssh="ssh -p 8766" nathan@room409.xyz'
@@ -43,6 +44,10 @@ alias pi='mosh -p 9001 --ssh="ssh -p 9000" pi@room409.xyz'
 alias cloud='ssh 107.191.103.252'
 
 alias l='i3lock; systemctl suspend'
+
+alias nixc='vim /home/nathan/vim_config/configuration.nix'
+#alias nixc='sudo vim /etc/nixos/configuration.nix'
+alias nixr='sudo nixos-rebuild switch'
 
 
 alias algo='cd ~/currentSemester/CS3510'

@@ -42,6 +42,11 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    #xonotic
+    i3lock
+    psmisc
+    htop
+    pv
     networkmanagerapplet
     python3
     clisp
@@ -59,13 +64,14 @@
     gnumake
     cmake
     firefox
-    chromium
+    #chromium
     google-chrome
     i3status
     dmenu
     pavucontrol
     sakura
     gparted
+    emscripten
   ];
 
   # List services that you want to enable:
@@ -116,7 +122,7 @@
   
   nixpkgs.config = {
     allowUnfree = true;
-    chromium.enableWideVine = true;
+    #chromium.enableWideVine = true;
   };
 
 }

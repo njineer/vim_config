@@ -25,9 +25,6 @@
 
 
   networking.hostName = "nixos-nathan"; # Define your hostname.
-  #networking.wireless.enable = true;    # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;
-  services.xserver.displayManager.sessionCommands = "${pkgs.networkmanagerapplet}/bin/nm-applet &";
 
   # Select internationalisation properties.
   i18n = {
@@ -37,7 +34,7 @@
   };
 
   # Set your time zone.
-  # time.timeZone = "Europe/Amsterdam";
+  time.timeZone = "America/New_York";
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -72,6 +69,9 @@
     sakura
     gparted
     emscripten
+    #sway
+    #dmenu-wayland
+    #xwayland
   ];
 
   # List services that you want to enable:
@@ -81,6 +81,10 @@
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
+
+  #networking.wireless.enable = true;    # Enables wireless support via wpa_supplicant.
+  networking.networkmanager.enable = true;
+  services.xserver.displayManager.sessionCommands = "${pkgs.networkmanagerapplet}/bin/nm-applet &";
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -94,6 +98,7 @@
   services.xserver.synaptics.buttonsMap = [1 3 2];
   #services.xserver.displayManager.kdm.enable = true;
   #services.xserver.desktopManager.kde4.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
   services.xserver.windowManager.i3.enable = true;
 
 

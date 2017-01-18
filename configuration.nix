@@ -40,6 +40,11 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     #xonotic
+    nmap
+    iw
+    rfkill
+    haskellPackages.idris
+    evince
     i3lock
     psmisc
     htop
@@ -72,12 +77,15 @@
     #sway
     #dmenu-wayland
     #xwayland
+    steam
   ];
+
+
 
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+   services.openssh.enable = true;
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -123,6 +131,8 @@
   hardware = {
 	  pulseaudio.enable = true;
 	  pulseaudio.support32Bit = true;
+      # Steam stuff
+      opengl.driSupport32Bit = true;
   };
   
   nixpkgs.config = {

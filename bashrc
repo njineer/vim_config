@@ -31,6 +31,7 @@ alias free='free -m'                      # show sizes in MB
 #alias tmux='tmux -2'                      # automatically support 256 colors
 alias lg='java -jar ~/Downloads/Logisim2.jar'
 alias np='nano PKGBUILD'
+alias dir='netcat lu-serve.gatech.edu 105'
 
 #alias n='nvim'
 #alias n='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'

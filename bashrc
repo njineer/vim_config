@@ -46,7 +46,8 @@ alias cloud='ssh 104.238.179.164'
 
 alias l='i3lock; systemctl suspend'
 
-alias nixc='vim /home/nathan/vim_config/configuration.nix'
+#alias nixc='vim /home/nathan/vim_config/configuration.nix'
+alias nixc='vim /etc/nixos/configuration.nix'
 #alias nixc='sudo vim /etc/nixos/configuration.nix'
 alias nixr='sudo nixos-rebuild switch'
 alias nixu='sudo nixos-rebuild switch --upgrade'

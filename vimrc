@@ -76,10 +76,11 @@ set t_Co=256
 
 set termguicolors
 "colorscheme gruvbox
-colorscheme oxeded
+"colorscheme oxeded
 "colorscheme mustang
 "colorscheme monokain
 "colorscheme lucius
+colorscheme onedark
 " Airline
 let g:airline_powerline_fonts = 1
 set laststatus=2

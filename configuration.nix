@@ -55,6 +55,7 @@
     cryptsetup
     wget
     vim
+    ninja
     git
     gdb
     valgrind
@@ -78,6 +79,9 @@
     #dmenu-wayland
     #xwayland
     steam
+    kde4.kcachegrind
+    cloc
+    clang
   ];
 
 

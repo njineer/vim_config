@@ -14,16 +14,11 @@
 
   # Use the systemd-boot EFI boot loader.
   boot = {
-  	  initrd.luks.devices = [{
-	  	name = "cryptVG";
-		device = "/dev/sda6";
-		preLVM = true;
-	  }];
 	  loader = {
-		  efi.canTouchEfiVariables = true;
-		  systemd-boot.enable = true;
+		  grub.enable = true;
+                  grub.device = "/dev/sda";
 	  };
   };
 
-  networking.hostName = "nixos-nathan"; # Define your hostname.
+  networking.hostName = "nixos-old-laptop"; # Define your hostname.
 }

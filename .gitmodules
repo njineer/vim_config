@@ -79,3 +79,12 @@
 [submodule ".vim/bundle/typescript-vim"]
 	path = bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/onedark.vim"]
+	path = bundle/onedark.vim
+	url = https://github.com/joshdick/onedark.vim
+[submodule "tmux_plugins/tmux-onedark-theme"]
+	path = tmux_plugins/tmux-onedark-theme
+	url = https://github.com/odedlaz/tmux-onedark-theme.git
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/powerline/fonts.git

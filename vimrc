@@ -20,6 +20,8 @@ set incsearch   " Show first match while still typing it
 
 " autoreload .vimrc
 autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost init.vim source %
+autocmd! bufwritepost vimrc source %
 
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>h <C-w>s<C-w>l
@@ -38,8 +40,12 @@ nnoremap <leader>h <C-w>s<C-w>l
 " Unite
 let g:unite_source_history_yank_enable = 1
 let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --hidden --ignore '
+let g:unite_source_grep_default_opts = '-u --line-numbers --nocolor --nogroup --hidden --ignore '
+"let g:unite_source_grep_default_opts = '--line-numbers --nocolor --nogroup --hidden --ignore '
 "let g:unite_source_grep_recursive_opt = ''
+"
+"let g:unite_source_grep_command = 'rg'
+"let g:unite_source_grep_default_opts = '--vimgrep'
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>p :<C-u>Unite -no-split -buffer-name=files -start-insert file<cr>
@@ -70,16 +76,19 @@ set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
 
+set termguicolors
 "colorscheme kalisi
+"colorscheme gruvbox
+"colorscheme oxeded
+"colorscheme mustang
+"colorscheme monokain
+"
+"colorscheme lucius
+colorscheme onedark
+
 "set background=dark
 "set background=light
 
-set termguicolors
-"colorscheme gruvbox
-colorscheme oxeded
-"colorscheme mustang
-"colorscheme monokain
-"colorscheme lucius
 " Airline
 let g:airline_powerline_fonts = 1
 set laststatus=2
@@ -89,17 +98,17 @@ set laststatus=2
 "let g:airline_symbols.space = "\ua0"
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
+"let g:syntastic_cpp_compiler = 'clang++'
+"let g:syntastic_cpp_compiler_options = ' -std=c++11'
 "let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 " Neocomlcache Settings

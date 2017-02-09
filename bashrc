@@ -31,18 +31,26 @@ alias free='free -m'                      # show sizes in MB
 #alias tmux='tmux -2'                      # automatically support 256 colors
 alias lg='java -jar ~/Downloads/Logisim2.jar'
 alias np='nano PKGBUILD'
+alias dir='netcat lu-serve.gatech.edu 105'
 
 #alias n='nvim'
-alias n='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
-alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
+#alias n='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
+#alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
+alias vim='nvim'
 
 alias o='xdg-open'
 alias desk='mosh -p 8765 --ssh="ssh -p 8766" nathan@room409.xyz'
 alias serv='mosh -p 8768 --ssh="ssh -p 8767" nathan@room409.xyz'
 alias pi='mosh -p 9001 --ssh="ssh -p 9000" pi@room409.xyz'
-alias cloud='ssh 107.191.103.252'
+alias cloud='ssh 104.238.179.164'
 
 alias l='i3lock; systemctl suspend'
+
+#alias nixc='vim /home/nathan/vim_config/configuration.nix'
+alias nixc='vim /etc/nixos/configuration.nix'
+#alias nixc='sudo vim /etc/nixos/configuration.nix'
+alias nixr='sudo nixos-rebuild switch'
+alias nixu='sudo nixos-rebuild switch --upgrade'
 
 
 alias algo='cd ~/currentSemester/CS3510'

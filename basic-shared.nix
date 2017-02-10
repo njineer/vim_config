@@ -71,6 +71,7 @@
     kde4.kcachegrind
     cloc
     clang
+    st
   ];
 
 
@@ -120,6 +121,7 @@
   
   nixpkgs.config = {
     allowUnfree = true;
+    #st.conf = "/*entire config file...*/";
     #chromium.enableWideVine = true;
   };
 

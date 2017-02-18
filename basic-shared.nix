@@ -89,6 +89,7 @@
 
   #networking.wireless.enable = true;    # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
+  networking.firewall.enable = false;
   services.xserver.displayManager.sessionCommands = "${pkgs.networkmanagerapplet}/bin/nm-applet &";
 
   # Enable the X11 windowing system.
@@ -124,6 +125,7 @@
   
   nixpkgs.config = {
     allowUnfree = true;
+    
     #st.conf = "/*entire config file...*/";
     #chromium.enableWideVine = true;
     firefox.enableAdobeFlash = true;

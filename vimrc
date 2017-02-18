@@ -86,7 +86,7 @@ set termguicolors
 "colorscheme lucius
 colorscheme onedark
 
-"set background=dark
+set background=dark
 "set background=light
 
 " Airline

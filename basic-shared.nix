@@ -40,6 +40,7 @@
     pv
     networkmanagerapplet
     python3
+    python
     clisp
     cryptsetup
     wget
@@ -72,6 +73,8 @@
     cloc
     clang
     st
+    lsof
+    vlc
   ];
 
 
@@ -123,6 +126,7 @@
     allowUnfree = true;
     #st.conf = "/*entire config file...*/";
     #chromium.enableWideVine = true;
+    firefox.enableAdobeFlash = true;
   };
 
 }

@@ -71,6 +71,7 @@
     kde4.kcachegrind
     cloc
     clang
+    st
   ];
 
 
@@ -85,6 +86,7 @@
 
   #networking.wireless.enable = true;    # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
+  networking.firewall.enable = false;
   services.xserver.displayManager.sessionCommands = "${pkgs.networkmanagerapplet}/bin/nm-applet &";
 
   # Enable the X11 windowing system.
@@ -100,7 +102,7 @@
 
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "16.09";
+  system.stateVersion = "unstable";
 
   users.extraUsers.nathan = {
 	  name = "nathan";
@@ -120,6 +122,8 @@
   
   nixpkgs.config = {
     allowUnfree = true;
+    
+    #st.conf = "/*entire config file...*/";
     #chromium.enableWideVine = true;
   };
 

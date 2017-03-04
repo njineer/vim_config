@@ -68,10 +68,11 @@
     #dmenu-wayland
     #xwayland
     steam
-    kde4.kcachegrind
+    #kde4.kcachegrind
     cloc
     clang
     st
+    dmidecode
   ];
 
 

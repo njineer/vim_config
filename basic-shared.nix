@@ -25,6 +25,7 @@
   # Set your time zone.
   time.timeZone = "America/New_York";
 
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -68,10 +69,11 @@
     #dmenu-wayland
     #xwayland
     steam
-    kde4.kcachegrind
+#kde4.kcachegrind
     cloc
     clang
     st
+    lm_sensors
   ];
 
 

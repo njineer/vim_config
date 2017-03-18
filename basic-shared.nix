@@ -69,11 +69,12 @@
     #dmenu-wayland
     #xwayland
     steam
-#kde4.kcachegrind
     cloc
     clang
     st
     lm_sensors
+    #kde4.kcachegrind
+    dmidecode
   ];
 
 

@@ -11,8 +11,10 @@
       /home/nathan/vim_config/basic-shared.nix
     ];
 
+  #powerManagement.cpuFreqGovernor = "preformance"; 
   # Use the systemd-boot EFI boot loader.
   boot = {
+    #kernelPackages = pkgs.linuxPackages_4_10;
 	  loader = {
 		  efi.canTouchEfiVariables = true;
 		  systemd-boot.enable = true;

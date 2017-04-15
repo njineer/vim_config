@@ -73,6 +73,7 @@
     clang
     st
     dmidecode
+    xclip
   ];
 
 

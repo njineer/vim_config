@@ -71,11 +71,11 @@
     steam
     cloc
     clang
-    st
     lm_sensors
     #kde4.kcachegrind
     dmidecode
     xclip
+    (pkgs.st.overrideAttrs (attrs: { configFile = builtins.readFile /home/nathan/vim_config/config.h; }))
   ];
 
 

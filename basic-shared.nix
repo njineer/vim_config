@@ -75,6 +75,7 @@
     lm_sensors
     #kde4.kcachegrind
     dmidecode
+    iftop
   ];
 
 

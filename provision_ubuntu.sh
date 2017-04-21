@@ -65,3 +65,14 @@ easy_pkg() {
 easy_pkg https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
 easy_pkg https://github.com/tmux/tmux/releases/download/2.3/tmux-2.3.tar.gz
 
+# suckless st
+if ! [ -s st ]
+then
+    sudo apt install libx11-dev libxft-dev libxext-dev
+    git clone git://git.suckless.org/st
+    cd st
+    git checkout tags/0.7
+    cp ~/vim_config/config.h ./
+    sed 's#PREFIX =.*#PREFIX = '$PREFIX'#g' config.mk -i
+    make clean install
+fi

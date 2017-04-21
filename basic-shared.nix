@@ -76,6 +76,7 @@
     #kde4.kcachegrind
     dmidecode
     iftop
+    xclip
   ];
 
 

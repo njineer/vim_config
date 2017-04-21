@@ -5,6 +5,7 @@ set -e
 #sudo apt-get update
 #sudo apt-get upgrade
 #sudo apt-get install vim git ncurses-dev
+#sudo apt-get install i3 dmenu
 #git clone https://github.com/Limvot/vim_config.git
 #cd vim_config
 #git submodule init

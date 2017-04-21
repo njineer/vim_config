@@ -74,6 +74,7 @@
     lm_sensors
     #kde4.kcachegrind
     dmidecode
+    iftop
     xclip
     (pkgs.st.overrideAttrs (attrs: { configFile = builtins.readFile /home/nathan/vim_config/config.h; }))
   ];

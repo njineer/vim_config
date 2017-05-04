@@ -34,9 +34,9 @@ then
 fi
 
 easy_pkg() {
-    URL=$1
+    FOLDER=$1
+    URL=$2
     ARCHIVE="${URL##*/}"
-    FOLDER="${ARCHIVE%.tar.gz}"
     echo "$URL, $ARCHIVE, $FOLDER"
 
     if ! [ -s "$ARCHIVE" ]
@@ -52,19 +52,26 @@ easy_pkg() {
             rm -r "$FOLDER"
         fi
 
+        mkdir "$FOLDER"
+        cd "$FOLDER"
+        cp "../$ARCHIVE" ./
+
         tar xf $ARCHIVE
 
-        cd $FOLDER
+        # bit of a hack - it might not extract to the same name, but hopefully the name is in it...
+        # this is also why we do everything inside a folder we make, which is cleaner anyway
+        cd *$FOLDER*
         env CPPFLAGS="-I$PREFIX/include/" LDFLAGS="-L$PREFIX/lib/" ./configure --prefix=$PREFIX
         make
         make install
-        cd ..
+        cd ../..
         echo "finished" > "$FOLDER.finished"
     fi
 }
 
-easy_pkg https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
-easy_pkg https://github.com/tmux/tmux/releases/download/2.3/tmux-2.3.tar.gz
+easy_pkg libevent https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
+easy_pkg tmux https://github.com/tmux/tmux/releases/download/2.3/tmux-2.3.tar.gz
+easy_pkg vim https://github.com/vim/vim/archive/v8.0.0596.tar.gz
 
 # suckless st
 if ! [ -s st ]

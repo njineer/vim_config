@@ -61,6 +61,13 @@ easy_pkg() {
         # bit of a hack - it might not extract to the same name, but hopefully the name is in it...
         # this is also why we do everything inside a folder we make, which is cleaner anyway
         cd *$FOLDER*
+
+        # git (maybe others) don't have the configure script by default
+        if ! [ -s "configure" ]
+        then
+            make configure
+        fi
+
         env CPPFLAGS="-I$PREFIX/include/" LDFLAGS="-L$PREFIX/lib/" ./configure --prefix=$PREFIX
         make
         make install
@@ -72,6 +79,7 @@ easy_pkg() {
 easy_pkg libevent https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
 easy_pkg tmux https://github.com/tmux/tmux/releases/download/2.3/tmux-2.3.tar.gz
 easy_pkg vim https://github.com/vim/vim/archive/v8.0.0596.tar.gz
+easy_pkg git https://github.com/git/git/archive/v2.12.2.tar.gz
 
 # suckless st
 if ! [ -s st ]

@@ -2,6 +2,9 @@
 
 set -e
 
+#sudo yum groupinstall 'Development Tools'
+#sudo yum install ncurses-devel openssl-devel
+
 #sudo apt-get update
 #sudo apt-get upgrade
 #sudo apt-get install vim git ncurses-dev
@@ -85,7 +88,8 @@ easy_pkg git https://github.com/git/git/archive/v2.12.2.tar.gz
 # suckless st
 if ! [ -s st ]
 then
-    sudo apt install libx11-dev libxft-dev libxext-dev
+    #sudo apt install libx11-dev libxft-dev libxext-dev
+    #sudo yum install libX11-devel libXft-devel libXext-devel
     git clone git://git.suckless.org/st
     cd st
     git checkout tags/0.7

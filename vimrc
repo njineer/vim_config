@@ -72,6 +72,7 @@ nnoremap <leader>u :GundoToggle<CR>
 set termguicolors
 "set guicolors
 set t_Co=256
+set term=xterm-256color
 " in case t_Co alone doesn't work, add this as well:
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"

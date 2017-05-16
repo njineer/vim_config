@@ -33,11 +33,6 @@ alias lg='java -jar ~/Downloads/Logisim2.jar'
 alias np='nano PKGBUILD'
 alias dir='netcat lu-serve.gatech.edu 105'
 
-#alias n='nvim'
-#alias n='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
-#alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 /home/nathan/neovim/build/bin/nvim'
-alias vim='nvim'
-
 alias o='xdg-open'
 alias desk='mosh -p 8765 --ssh="ssh -p 8766" nathan@room409.xyz'
 alias serv='mosh -p 8768 --ssh="ssh -p 8767" nathan@room409.xyz'
@@ -98,3 +93,5 @@ alias jstest="python2 ../tests/jstests.py ./dist/bin/js"
 
 export PATH=$PATH:~/bin:~/.gem/ruby/2.1.0/bin:~/Nim/bin:/opt/android-sdk/android-sdk-linux/tools
 
+export PATH=/home/nbraswell6/packages/installed/bin:$PATH
+export LD_LIBRARY_PATH=/home/nbraswell6/packages/installed/lib:$LD_LIBRARY_PATH

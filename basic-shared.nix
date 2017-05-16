@@ -25,6 +25,7 @@
   # Set your time zone.
   time.timeZone = "America/New_York";
 
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -69,14 +70,19 @@
     #dmenu-wayland
     #xwayland
     steam
-    #kde4.kcachegrind
-    cloc
-    clang
     st
     lsof
     libreoffice
     iftop
     vlc
+    cloc
+    clang
+    lm_sensors
+    dmidecode
+    xclip
+    (pkgs.st.overrideAttrs (attrs: { configFile = builtins.readFile /home/nathan/vim_config/config.h; }))
+    openvpn
+    synergy
   ];
 
 

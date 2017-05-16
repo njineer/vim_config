@@ -69,14 +69,15 @@
     #dmenu-wayland
     #xwayland
     steam
-    kde4.kcachegrind
+    #kde4.kcachegrind
     cloc
     clang
     st
     lsof
+    libreoffice
+    iftop
     vlc
   ];
-
 
 
   # List services that you want to enable:
@@ -99,8 +100,9 @@
 
   # Enable the KDE Desktop Environment.
   #services.xserver.displayManager.kdm.enable = true;
-  #services.xserver.desktopManager.kde4.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
+  #services.xserver.desktopManager.kde.enable = true;
+  #services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.slim.enable = true;
   services.xserver.windowManager.i3.enable = true;
 
 
@@ -119,6 +121,9 @@
   hardware = {
 	  pulseaudio.enable = true;
 	  pulseaudio.support32Bit = true;
+
+      bluetooth.enable = true;
+
       # Steam stuff
       opengl.driSupport32Bit = true;
   };
